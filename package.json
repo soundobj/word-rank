@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "ranks a list of phrases by number of word overlap",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "david de diego",
   "license": "ISC",
   "dependencies": {
     "jspm": "^0.15.3",
     "systemjs": "^0.16.7",
     "traceur": "^0.0.88",
-    "word-overlap": "2.3.2"
+    "word-overlap": "2.3.2",
+    "mocha": "^2.0.1",
+    "sinon": "^1.12.1"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:mocha-traceur test/*.js"
   },
   "devDependencies": {}
 }
