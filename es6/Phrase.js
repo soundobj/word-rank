@@ -17,12 +17,12 @@ export class Phrase {
     }
 
     sanitizePhrase() {
-        for(let el of this.elements.values()) {
-            var elToSanitise = el;
-            elToSanitise = this.wordSanitizer.sanitize(elToSanitise);
-            elToSanitise = this.wordSanitizer.depluralize([elToSanitise],['']);
-            elToSanitise = this.wordSanitizer.stem(elToSanitise);
-            this.sanitizedElements.push(elToSanitise[0]);
+        for(let element of this.elements.values()) {
+            let el = element;
+            el = this.wordSanitizer.sanitize(el);
+            el = this.wordSanitizer.depluralize([el],['']);
+            el = this.wordSanitizer.stem(el);
+            this.sanitizedElements.push(el[0]);
         }
     }
 }
