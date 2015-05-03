@@ -1,10 +1,67 @@
 [
-	{
-		"author": "david",
-		"quote": "This is the first quote"
-	},
-	{
-		"author": "moochy",
-		"quote": "give me some breakfast"
-	}
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "A serious person can never be innocent, and one who is innocent can never be serious"
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "Accept yourself as you are. And that is the most difficult thing in the world, because it goes against your training, education, your culture."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "A comfortable, convenient life is not a real life – the more comfortable, the less alive. The most comfortable life is in the grave."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "The only authentic responsibility is towards your own potential. Values have not to be imposed on you. They should grow with your awareness, in you."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "If you love yourself, you love others. If you hate yourself, you hate others. In relationship with others, it is only you mirrored."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "Happiness is an art that one has to learn. It has nothing to do with your doing or not doing."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "If you live with love, through love, you will live a great life, because love makes everything great."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "Don´t be unnecessarily burdened by the past. Go on closing the chapters that you have read; there is no need to go back again and again."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "Drop comparing and life is really beautiful. Drop comparing and you can enjoy life to the full. "
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Rajneesh",
+	"author": "Osho",
+	"quote": "The greatest freedom is to be free of one’s own mind."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Bob_Dylan",
+	"author": "Bob Dylan",
+	"quote": "Even if you don't have all the things you want, be grateful for the things you don't have that you don't want."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Bob_Dylan",
+	"author": "Bob Dylan",
+	"quote": "You can never be wise and be in love at the same time."
+  },
+  {
+	"url" : "http://en.wikipedia.org/wiki/Bob_Dylan",
+	"author": "Bob Dylan",
+	"quote": "Behind every beautiful thing, there's some kind of pain."
+  }
 ]

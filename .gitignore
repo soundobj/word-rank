@@ -6,3 +6,7 @@ node_modules
 .idea/watcherTasks.xml
 
 dist/wordRank.js
+
+js/factory.js
+
+npm-debug.log
