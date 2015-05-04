@@ -1,3 +1,4 @@
+require("./mapUtils");
 /**
  * wordIndex = {
  *      "word" : [
@@ -14,12 +15,12 @@
  */
 export function wordIndexer (phrases) {
 
-    let wordIndex = {};
+    let wordIndex = new Map();
 
     let commonWords = [
         'a', 'an', 'the', 'this', 'that', 'there', 'it',
         'in', 'on', 'for', 'not', 'your', 'you', 'at',
-        'to', 'is', 'us', 'out', 'by', 'I'
+        'to', 'is', 'us', 'out', 'by', 'i', 'isn\'t'
     ];
 
     return {
@@ -29,13 +30,7 @@ export function wordIndexer (phrases) {
                 for(let [a,word] of phrase.entries()) {
 
                     if(commonWords.indexOf(word) === -1) {
-                        let entry = {"phrase":i,"pos":a};
-
-                        if(!wordIndex[word]) {
-                            wordIndex[word] = [entry];
-                        } else {
-                            wordIndex[word].push(entry);
-                        }
+                        wordIndex.createOrUpdate(word,{"phrase":i,"pos":a});
                     }
                 }
             }

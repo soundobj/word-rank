@@ -1,22 +1,29 @@
 import {phraseFactory} from '../es6/phraseFactory'
-var assert = require('assert');
-var should = require('should');
 var expect = require('chai').expect;
-var wordOverlap = require('../node_modules/word-overlap/lib/lib');
+var should = require('should');
 
 describe('Phrase scenarios', () => {
 
-    it("should build matchableWordsMap", () => {
+    let phrase;
 
-        let phrase = phraseFactory("programming! gets out the best, in people");
-        phrase.sanitizePhrase();
+    beforeEach(() => {
+        phrase = phraseFactory("programming! gets out the best, in people");
+        phrase.sanitize();
+    });
 
+    it("should sanitize words in a phrase", () => {
         expect(phrase.sanitized).to.have.members(
             ['program','get','out','the','best','in','person'])
         ;
+    });
 
+    it("should tokenise phrase elements", () => {
         expect(phrase.elements).to.have.members(
             ['programming!','gets','out','the','best,','in','people'])
         ;
+    });
+
+    afterEach(() => {
+        phrase = null;
     });
 });

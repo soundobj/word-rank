@@ -7,9 +7,8 @@
   "license": "ISC",
   "dependencies": {
     "jspm": "^0.15.3",
-    "systemjs": "^0.16.7",
-    "traceur": "^0.0.88",
-    "word-overlap": "2.3.2"
+    "word-overlap": "2.3.2",
+    "babel-node": "^2.5.1"
   },
   "scripts": {
     "test": "mocha --compilers js:babel/register test/*.js"
@@ -17,14 +16,10 @@
   "devDependencies": {
     "babel": "^5.2.6",
     "chai": "^2.2.0",
-    "gulp-jasmine": "^2.0.1",
+    "chai-immutable": "^0.3.0",
     "gulp-shell": "^0.4.1",
-    "gulp-traceur": "^0.17.1",
-    "jasmine-core": "^2.2.0",
-    "karma": "^0.12.31",
-    "karma-jasmine": "^0.3.5",
+    "immutable": "^3.7.2",
     "mocha": "^2.0.1",
-    "phantomjs": "^1.9.16",
     "sinon": "^1.12.1"
   }
 }
