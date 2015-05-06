@@ -18,7 +18,7 @@ export function phraseFactory (phrase) {
                 el = depluralize([el], ['']);
                 el = stem(el);
                 els.push(el[0]);
-                if(callback){
+                if(typeof (callback) === "function"){
                     callback(el[0],i);
                 }
             }
