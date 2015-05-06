@@ -15,7 +15,7 @@ require("./mapUtils");
  */
 export function wordIndexer (phrases) {
 
-    let wordIndex = new Map();
+    let _index = new Map();
 
     let commonWords = [
         'a', 'an', 'the', 'this', 'that', 'there', 'it',
@@ -23,18 +23,30 @@ export function wordIndexer (phrases) {
         'to', 'is', 'us', 'out', 'by', 'i', 'isn\'t'
     ];
 
+    let _addEntry = function(word, phrase, pos) {
+        if(commonWords.indexOf(word) === -1) {
+            _index.createOrUpdate(word,{"phrase":phrase,"pos":pos});
+        }
+    };
+
     return {
         index() {
             for(let [i,phrase] of phrases.entries()) {
 
                 for(let [a,word] of phrase.entries()) {
-
-                    if(commonWords.indexOf(word) === -1) {
-                        wordIndex.createOrUpdate(word,{"phrase":i,"pos":a});
-                    }
+                    _addEntry(word,i,a);
                 }
             }
         },
-        wordIndex : wordIndex
+        /**
+         * use as callback to populate the index alongside other process
+         * @param {Number} index - the index within the phrase of the word to be added
+         * @param {String} word - the word
+         * @param (Number} phraseIndex - the index of the phrase in the list. this is binded to the callback!
+         */
+        addEntry(word, pos) {
+            _addEntry(word,this.phraseIndex,pos);
+        },
+        wordIndex : _index
     }
 }

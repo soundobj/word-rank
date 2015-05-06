@@ -20,7 +20,6 @@ describe('word indexer scenarios', () => {
 
         wi = wordIndexer(phrases);
         wi.index();
-        console.log(`i is :${wi.wordIndex.get("i")}`);
     })
 
     it("should build a word index", () => {

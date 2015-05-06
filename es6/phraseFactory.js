@@ -10,14 +10,17 @@ export function phraseFactory (phrase) {
         elements : phrase.split(" "),
         sanitized : undefined,
         relations : relations,
-        sanitize() {
+        sanitize(callback) {
             let els = [];
-            for (let element of this.elements.values()) {
+            for (let [i,element] of this.elements.entries()) {
                 let el = element;
                 el = sanitize(el);
                 el = depluralize([el], ['']);
                 el = stem(el);
                 els.push(el[0]);
+                if(callback){
+                    callback(el[0],i);
+                }
             }
             this.sanitized = els;
             return els;
